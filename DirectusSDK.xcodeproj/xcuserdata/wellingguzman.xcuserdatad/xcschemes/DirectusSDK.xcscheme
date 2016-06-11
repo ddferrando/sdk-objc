@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C3CAEA2E1CFF58A500CD6B27"
-               BuildableName = "libDirectusSDK.a"
+               BuildableName = "libDirectusSDK-0.0.1-pre-alpha.a"
                BlueprintName = "DirectusSDK"
                ReferencedContainer = "container:DirectusSDK.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C3CAEA2E1CFF58A500CD6B27"
-            BuildableName = "libDirectusSDK.a"
+            BuildableName = "libDirectusSDK-0.0.1-pre-alpha.a"
             BlueprintName = "DirectusSDK"
             ReferencedContainer = "container:DirectusSDK.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C3CAEA2E1CFF58A500CD6B27"
-            BuildableName = "libDirectusSDK.a"
+            BuildableName = "libDirectusSDK-0.0.1-pre-alpha.a"
             BlueprintName = "DirectusSDK"
             ReferencedContainer = "container:DirectusSDK.xcodeproj">
          </BuildableReference>
