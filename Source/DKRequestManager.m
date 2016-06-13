@@ -25,6 +25,7 @@
 - (id)requestWithPath:(NSString *)path error:(NSError **)error
 {
     NSString *body = [self synchronousRequestWithPath:path error:error];
+
     return [NSJSONSerialization JSONObjectWithData:[body dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:error];
 }
 

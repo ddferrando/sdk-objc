@@ -77,6 +77,12 @@
 - (NSArray *)fetchPrivilegesWithGroupID:(NSUInteger *)groupID error:(NSError **)error;
 
 #pragma mark -
+#pragma mark Users
+
+- (NSDictionary *)fetchUsersWithError:(NSError **)error;
+- (NSDictionary *)fetchUserWithID:(NSUInteger *)userID error:(NSError **)error;
+
+#pragma mark -
 #pragma mark Files
 
 - (NSDictionary *)fetchFilesWithError:(NSError **)error;

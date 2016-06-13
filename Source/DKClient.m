@@ -92,6 +92,20 @@
 }
 
 #pragma mark -
+#pragma mark Users
+
+- (NSDictionary *)fetchUsersWithError:(NSError **)error
+{
+    return [self fetchRowsInTable:@"directus_users" error:error];
+}
+- (NSDictionary *)fetchUserWithID:(NSUInteger *)userID error:(NSError **)error
+{
+    return [self fetchARowInTable:@"directus_users"
+                        withRowID:SFORMAT(@"%lu", (unsigned long)userID)
+                        error:error];
+}
+
+#pragma mark -
 #pragma mark Files
 
 - (NSDictionary *)fetchFilesWithError:(NSError **)error
