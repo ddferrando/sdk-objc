@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <STHTTPRequest/STHTTPRequest.h>
+#import "STHTTPRequest/STHTTPRequest.h"
 
 // [server-url]/api/[version]/[path]?access_token=[token]
 static NSString *URLFormat = @"%@/api/%@%@?access_token=%@";

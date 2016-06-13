@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C3CAEA3D1CFF590D00CD6B27 /* DKClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CAEA3C1CFF590D00CD6B27 /* DKClient.m */; };
 		C3CAEA401CFF592300CD6B27 /* DKRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CAEA3F1CFF592300CD6B27 /* DKRequestManager.m */; };
-		E945CCAAA184B19D64DAA310 /* libPods-DirectusSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7B475E1D6F7D9BF4FD046 /* libPods-DirectusSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,14 +24,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1BA2FBE38D7F5DA7AD91C3C0 /* Pods-DirectusSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectusSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-DirectusSDK/Pods-DirectusSDK.release.xcconfig"; sourceTree = "<group>"; };
-		70A12AA8034F68953DF9D0C3 /* Pods-DirectusSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectusSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DirectusSDK/Pods-DirectusSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		C33211CB1D0F1526004DB0C4 /* STHTTPRequest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = STHTTPRequest; path = External/STHTTPRequest; sourceTree = "<group>"; };
 		C3CAEA2F1CFF58A500CD6B27 /* libDirectusSDK-0.0.1-pre-alpha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libDirectusSDK-0.0.1-pre-alpha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CAEA3B1CFF590D00CD6B27 /* DKClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKClient.h; path = Source/DKClient.h; sourceTree = SOURCE_ROOT; };
 		C3CAEA3C1CFF590D00CD6B27 /* DKClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKClient.m; path = Source/DKClient.m; sourceTree = SOURCE_ROOT; };
 		C3CAEA3E1CFF592300CD6B27 /* DKRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKRequestManager.h; path = Source/DKRequestManager.h; sourceTree = SOURCE_ROOT; };
 		C3CAEA3F1CFF592300CD6B27 /* DKRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKRequestManager.m; path = Source/DKRequestManager.m; sourceTree = SOURCE_ROOT; };
-		D7B7B475E1D6F7D9BF4FD046 /* libPods-DirectusSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DirectusSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,20 +37,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E945CCAAA184B19D64DAA310 /* libPods-DirectusSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		48A7A078674D880B7B42EE05 /* Pods */ = {
+		C33211CA1D0F1513004DB0C4 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				70A12AA8034F68953DF9D0C3 /* Pods-DirectusSDK.debug.xcconfig */,
-				1BA2FBE38D7F5DA7AD91C3C0 /* Pods-DirectusSDK.release.xcconfig */,
+				C33211CB1D0F1526004DB0C4 /* STHTTPRequest */,
 			);
-			name = Pods;
+			name = External;
 			sourceTree = "<group>";
 		};
 		C3CAEA261CFF58A500CD6B27 = {
@@ -61,7 +56,7 @@
 			children = (
 				C3CAEA311CFF58A500CD6B27 /* Source */,
 				C3CAEA301CFF58A500CD6B27 /* Products */,
-				48A7A078674D880B7B42EE05 /* Pods */,
+				C33211CA1D0F1513004DB0C4 /* External */,
 				E89CB23154414E39CE11FA59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -89,7 +84,6 @@
 		E89CB23154414E39CE11FA59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D7B7B475E1D6F7D9BF4FD046 /* libPods-DirectusSDK.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,11 +95,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3CAEA381CFF58A500CD6B27 /* Build configuration list for PBXNativeTarget "DirectusSDK" */;
 			buildPhases = (
-				C08A76B07DB8BA9F1C9F98A2 /* [CP] Check Pods Manifest.lock */,
 				C3CAEA2B1CFF58A500CD6B27 /* Sources */,
 				C3CAEA2C1CFF58A500CD6B27 /* Frameworks */,
 				C3CAEA2D1CFF58A500CD6B27 /* CopyFiles */,
-				B88F98656BE02431F34D2777 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,39 +139,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B88F98656BE02431F34D2777 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DirectusSDK/Pods-DirectusSDK-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C08A76B07DB8BA9F1C9F98A2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3CAEA2B1CFF58A500CD6B27 /* Sources */ = {
@@ -278,23 +237,23 @@
 		};
 		C3CAEA391CFF58A500CD6B27 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70A12AA8034F68953DF9D0C3 /* Pods-DirectusSDK.debug.xcconfig */;
 			buildSettings = {
 				DYLIB_CURRENT_VERSION = "0.0.1-pre-alpha";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)-${DYLIB_CURRENT_VERSION}";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/External";
 			};
 			name = Debug;
 		};
 		C3CAEA3A1CFF58A500CD6B27 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BA2FBE38D7F5DA7AD91C3C0 /* Pods-DirectusSDK.release.xcconfig */;
 			buildSettings = {
 				DYLIB_CURRENT_VERSION = "0.0.1-pre-alpha";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)-${DYLIB_CURRENT_VERSION}";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/External";
 			};
 			name = Release;
 		};
