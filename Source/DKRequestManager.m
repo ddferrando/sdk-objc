@@ -29,14 +29,38 @@
     return [NSJSONSerialization JSONObjectWithData:[body dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:error];
 }
 
+- (void)requestAsyncWithPath:(NSString *)path success:(DKCompleteResponseBlock)success failure:(DKFailureRequestBlock)failure
+{
+    [self asynchronousRequestWithPath:path success:^(NSDictionary *headers, NSString *body) {
+        NSError *error = nil;
+        id response = [NSJSONSerialization JSONObjectWithData:[body dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+        if (error == nil) {
+            success(headers, response);
+        } else {
+            failure(error);
+        }
+        
+    } failure:failure];
+}
+
 - (NSString *)synchronousRequestWithPath:(NSString *)path error:(NSError **)error
 {
-    STHTTPRequest *request = [self buildSynchronousRequestWithPath:path error:error];
+    STHTTPRequest *request = [self buildRequestWithPath:path];
     
     return [request startSynchronousWithError:error];
 }
 
-- (STHTTPRequest *)buildSynchronousRequestWithPath:(NSString *)path error:(NSError **)error
+- (void)asynchronousRequestWithPath:(NSString *)path success:(DKCompleteResponseBlock)success failure:(DKFailureRequestBlock)failure
+{
+    STHTTPRequest *request = [self buildRequestWithPath:path];
+    
+    request.completionBlock = success;
+    request.errorBlock = failure;
+    
+    return [request startAsynchronous];
+}
+
+- (STHTTPRequest *)buildRequestWithPath:(NSString *)path
 {
     return [STHTTPRequest requestWithURLString:[self buildServerURLWithPath:path]];
 }

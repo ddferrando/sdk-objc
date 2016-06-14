@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "DKRequestManager.h"
 
+@class DKRequestManager;
+
 
 #define SFORMAT(format, ...) ([NSString stringWithFormat:format, __VA_ARGS__])
 
@@ -66,15 +68,55 @@
 - (NSDictionary *)fetchAColumnInTable:(NSString *)tableName withColumnName:(NSString *)columnName error:(NSError **)error;
 - (NSDictionary *)fetchPreferencesInTable:(NSString *)tableName error:(NSError **)error;
 
+- (void)fetchTablesWithSuccess:(DKCompleteResponseBlock)succes
+                       failure:(DKFailureRequestBlock)failure;
+
+- (void)fetchTableWithName:(NSString *)tableName
+                   success:(DKCompleteResponseBlock)success
+                   failure:(DKFailureRequestBlock)failure;
+
+- (void)fetchRowsInTable:(NSString *)tableName
+                 success:(DKCompleteResponseBlock)success
+                 failure:(DKFailureRequestBlock)failure;
+
+- (void)fetchARowInTable:(NSString *)tableName
+               withRowID:(NSString *)rowID
+                 success:(DKCompleteResponseBlock)success
+                 failure:(DKFailureRequestBlock)failure;
+
+- (void)fetchColumnsInTable:(NSString *)tableName
+                    success:(DKCompleteResponseBlock)success
+                    failure:(DKFailureRequestBlock)failure;
+
+- (void)fetchAColumnInTable:(NSString *)tableName
+             withColumnName:(NSString *)columnName
+                    success:(DKCompleteResponseBlock)success
+                    failure:(DKFailureRequestBlock)failure;
+
+- (void)fetchPreferencesInTable:(NSString *)tableName
+                        success:(DKCompleteResponseBlock)success
+                        failure:(DKFailureRequestBlock)failure;
+
 #pragma mark -
 #pragma mark Groups
 
 - (NSDictionary *)fetchGroupsWithError:(NSError **)error;
 - (NSDictionary *)fetchGroupWithID:(NSUInteger *)groupID error:(NSError **)error;
 
+- (void)fetchGroupsWithSuccess:(DKCompleteResponseBlock)success
+                       failure:(DKFailureRequestBlock)failure;
+
+- (void)fetchGroupWithID:(NSUInteger *)groupID
+                  success:(DKCompleteResponseBlock)success
+                 failure:(DKFailureRequestBlock)failure;
+
 #pragma mark Groups Privileges
 
 - (NSArray *)fetchPrivilegesWithGroupID:(NSUInteger *)groupID error:(NSError **)error;
+
+- (void)fetchPrivilegesWithGroupID:(NSUInteger *)groupID
+                           success:(DKCompleteResponseBlock)success
+                           failure:(DKFailureRequestBlock)failure;
 
 #pragma mark -
 #pragma mark Users
@@ -82,11 +124,25 @@
 - (NSDictionary *)fetchUsersWithError:(NSError **)error;
 - (NSDictionary *)fetchUserWithID:(NSUInteger *)userID error:(NSError **)error;
 
+- (void)fetchUsersWithSuccess:(DKCompleteResponseBlock)success
+                                failure:(DKFailureRequestBlock)failure;
+
+- (void)fetchUserWithID:(NSUInteger *)userID
+                          success:(DKCompleteResponseBlock)success
+                          failure:(DKFailureRequestBlock)failure;
+
 #pragma mark -
 #pragma mark Files
 
 - (NSDictionary *)fetchFilesWithError:(NSError **)error;
 - (NSDictionary *)fetchFileWithID:(NSUInteger *)fileID error:(NSError **)error;
+
+- (void)fetchFilesWithSuccess:(DKCompleteResponseBlock)success
+                                failure:(DKFailureRequestBlock)failure;
+
+- (void)fetchFileWithID:(NSUInteger *)fileID
+                          success:(DKCompleteResponseBlock)success
+                          failure:(DKFailureRequestBlock)failure;
 
 #pragma mark -
 #pragma mark Settings
@@ -94,9 +150,17 @@
 - (NSArray *)fetchSettingsWithError:(NSError **)error;
 - (NSDictionary *)fetchSettingWithName:(NSString *)collectionName error:(NSError **)error;
 
+- (void)fetchSettingsWithSuccess:(DKCompleteResponseBlock)success
+                         failure:(DKFailureRequestBlock)failure;
+
+- (void)fetchSettingWithName:(NSString *)collectionName
+                     success:(DKCompleteResponseBlock)success
+                     failure:(DKFailureRequestBlock)failure;
+
 #pragma mark -
 
 - (id)requestWithPath:(NSString *)path error:(NSError **)error;
+- (void)requestAsyncWithPath:(NSString *)path success:(DKCompleteResponseBlock)success failure:(DKFailureRequestBlock)failure;
 
 #pragma mark -
 
