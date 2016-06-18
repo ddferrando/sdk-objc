@@ -51,12 +51,12 @@
     return [self requestWithPath:TableInfoPath(tableName) error:error];
 }
 
-- (NSDictionary *)fetchRowsInTable:(NSString *)tableName error:(NSError **)error
+- (NSDictionary *)fetchItemsInTable:(NSString *)tableName error:(NSError **)error
 {
     return [self requestWithPath:TablesRowsPath(tableName) error:error];
 }
 
-- (NSDictionary *)fetchARowInTable:(NSString *)tableName withRowID:(NSString *)rowID error:(NSError **)error
+- (NSDictionary *)fetchAItemInTable:(NSString *)tableName withRowID:(NSString *)rowID error:(NSError **)error
 {
     return [self requestWithPath:TableRowPath(tableName, rowID) error:error];
 }
@@ -89,14 +89,14 @@
     [self requestAsyncWithPath:TableInfoPath(tableName) success:success failure:failure];
 }
 
-- (void)fetchRowsInTable:(NSString *)tableName
+- (void)fetchItemsInTable:(NSString *)tableName
                  success:(DKCompleteResponseBlock)success
                  failure:(DKFailureRequestBlock)failure
 {
     [self requestAsyncWithPath:TablesRowsPath(tableName) success:success failure:failure];
 }
 
-- (void)fetchARowInTable:(NSString *)tableName
+- (void)fetchAItemInTable:(NSString *)tableName
                withRowID:(NSString *)rowID
                  success:(DKCompleteResponseBlock)success
                  failure:(DKFailureRequestBlock)failure

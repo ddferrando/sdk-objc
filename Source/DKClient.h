@@ -62,8 +62,8 @@
 
 - (NSArray *)fetchTablesWithError:(NSError **)error;
 - (NSDictionary *)fetchTableWithName:(NSString *)tableName error:(NSError **)error;
-- (NSDictionary *)fetchRowsInTable:(NSString *)tableName error:(NSError **)error;
-- (NSDictionary *)fetchARowInTable:(NSString *)tableName withRowID:(NSString *)rowID error:(NSError **)error;
+- (NSDictionary *)fetchItemsInTable:(NSString *)tableName error:(NSError **)error;
+- (NSDictionary *)fetchItemInTable:(NSString *)tableName withRowID:(NSString *)rowID error:(NSError **)error;
 - (NSArray *)fetchColumnsInTable:(NSString *)tableName error:(NSError **)error;
 - (NSDictionary *)fetchAColumnInTable:(NSString *)tableName withColumnName:(NSString *)columnName error:(NSError **)error;
 - (NSDictionary *)fetchPreferencesInTable:(NSString *)tableName error:(NSError **)error;
@@ -75,11 +75,11 @@
                    success:(DKCompleteResponseBlock)success
                    failure:(DKFailureRequestBlock)failure;
 
-- (void)fetchRowsInTable:(NSString *)tableName
+- (void)fetchItemsInTable:(NSString *)tableName
                  success:(DKCompleteResponseBlock)success
                  failure:(DKFailureRequestBlock)failure;
 
-- (void)fetchARowInTable:(NSString *)tableName
+- (void)fetchAItemInTable:(NSString *)tableName
                withRowID:(NSString *)rowID
                  success:(DKCompleteResponseBlock)success
                  failure:(DKFailureRequestBlock)failure;
