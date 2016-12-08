@@ -1,4 +1,4 @@
-# Directus Objective-C SDK
+# Directus Objective-C SDK (Under Development)
 
 [![CI Status](http://img.shields.io/travis/directus/directus-sdk-objc.svg?style=flat)](https://travis-ci.org/directus/directus-sdk-objc)
 [![Version](https://img.shields.io/cocoapods/v/directus-sdk-objc.svg?style=flat)](http://cocoapods.org/pods/directus-sdk-objc)
