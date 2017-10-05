@@ -21,9 +21,9 @@ Pod::Spec.new do |s|
 
     s.frameworks = 'SystemConfiguration', 'CoreData'
 
-    s.homepage     = "https://github.com/swagger-api/swagger-codegen"
+    s.homepage     = "https://github.com/directus/directus-sdk-objc"
     s.license      = "Proprietary"
-    s.source       = { :git => "https://github.com/swagger-api/swagger-codegen.git", :tag => "#{s.version}" }
+    s.source       = { :git => "https://github.com/directus/directus-sdk-objc", :tag => "#{s.version}" }
     s.author       = { "Swagger" => "apiteam@swagger.io" }
 
     s.source_files = 'DircetusClient/**/*.{m,h}'
