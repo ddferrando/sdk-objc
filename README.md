@@ -23,7 +23,7 @@
 
 <p>&nbsp;</p>
 
-# DircetusClient
+# DirectusClient
 
 API for directus.io
 
